@@ -71,3 +71,16 @@ button:focus-visible {
   border: 2px solid seagreen;
   border-radius: 20px;
 }
+
+.card {
+  border: 2px solid gold;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.card2 {
+  border: 2px solid rgb(42, 6, 248);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}

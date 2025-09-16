@@ -1,6 +1,12 @@
+import User from "../featch";
 import "./App.css";
 import Counter from "../counter";
 import Runs from "../run";
+import { Suspense } from "react";
+// fatch
+const fetchUser = fetch("https://jsonplaceholder.typicode.com/users").then(
+  (res) => res.json()
+);
 
 function App() {
   function handleClick() {
@@ -18,6 +24,10 @@ function App() {
       <Runs></Runs>
       <br />
       <Counter></Counter>
+
+      <Suspense fallback={<h3 className="card"> Lodding.....</h3>}>
+        <User fetchUser={fetchUser}></User>
+      </Suspense>
 
       <div style={{ display: "flex", gap: "20px" }}>
         <button style={{ backgroundColor: "red" }} onClick={handleClick}>
